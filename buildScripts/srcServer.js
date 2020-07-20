@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const open = require('open');
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -12,6 +11,10 @@ app.get('/', (req, res) => {
 
 // port initialisaton
 app.listen(PORT, (err) => {
-  err ? console.log(err)
-    : open('https://localhost:' + PORT)
-} )
+  (err) ? console.log(err) :
+    console.log(`App is listening on port ${PORT}`)
+});
+
+
+
+
