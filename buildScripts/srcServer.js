@@ -11,4 +11,7 @@ app.get('/', (req, res) => {
 });
 
 // port initialisaton
-
+app.listen(PORT, (err) => {
+  err ? console.log(err)
+    : open('https://localhost:' + PORT)
+} )
