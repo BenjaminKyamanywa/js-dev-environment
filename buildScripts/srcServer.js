@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const chalk = require('chalk');
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -12,7 +13,7 @@ app.get('/', (req, res) => {
 // port initialisaton
 app.listen(PORT, (err) => {
   (err) ? console.log(err) :
-    console.log(`App is listening on port ${PORT}`)
+    console.log(chalk.yellow(`App is listening on https://localhost:${PORT}`))
 });
 
 
